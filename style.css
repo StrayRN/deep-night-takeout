@@ -79,12 +79,21 @@ body {
   padding: 0.75rem 0 1.5rem;
 }
 
+.site-header-compact {
+  padding-top: 0.15rem;
+  padding-bottom: 1rem;
+}
+
 .site-header h1 {
   margin: 0.35rem 0 0.75rem;
   font-family: 'Songti SC', 'STSong', serif;
   font-size: clamp(2.1rem, 6vw, 4rem);
   line-height: 1.02;
   letter-spacing: 0.03em;
+}
+
+.site-header-compact h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
 }
 
 .site-intro,

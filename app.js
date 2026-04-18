@@ -8,9 +8,12 @@ import {
 } from './gameLogic.js';
 import { createEventUiState, getPostChoiceTransition } from './gameFlow.js';
 import { buildPhoneOrderDraftSummary, createResolvedChoice } from './gameRuntime.js';
+import { renderSiteHeader, syncDocumentMeta } from './appShell.js';
 
 const app = document.querySelector('#app');
 const chapters = GAME_DATA.chapters;
+
+syncDocumentMeta(PROJECT_COPY);
 
 let session = buildSession();
 
@@ -214,7 +217,7 @@ function render() {
 }
 
 function renderHome() {
-  app.innerHTML = `
+  renderPage(`
     <section class="panel hero-panel">
       <div class="hero-copy">
         <p class="section-label">一句话介绍</p>
@@ -255,7 +258,7 @@ function renderHome() {
 
       <button class="primary-button" data-action="start">开始这顿夜宵</button>
     </section>
-  `;
+  `);
 
   app.querySelector('[data-action="start"]').addEventListener('click', startGame);
 }
@@ -278,7 +281,7 @@ function renderPhoneOrderEvent(chapter, event) {
   const screen = event.screen;
   const selectedMainDish = summary.selectedCartItems[0];
 
-  app.innerHTML = `
+  renderPage(`
     <section class="panel scene-panel">
       ${renderSceneHeader(chapter, event)}
       <div class="scene-stack">
@@ -305,7 +308,9 @@ function renderPhoneOrderEvent(chapter, event) {
         </aside>
       </div>
     </section>
-  `;
+  `, {
+    compactHeader: true
+  });
 
   bindPhoneOrderHandlers();
 }
@@ -544,7 +549,7 @@ function renderLockerSceneEvent(chapter, event) {
     ? `style="--locker-art:url('${screen.backgroundImage}')"`
     : '';
 
-  app.innerHTML = `
+  renderPage(`
     <section class="panel scene-panel">
       ${renderSceneHeader(chapter, event)}
       <div class="scene-stack">
@@ -596,7 +601,9 @@ function renderLockerSceneEvent(chapter, event) {
         </aside>
       </div>
     </section>
-  `;
+  `, {
+    compactHeader: true
+  });
 
   bindChoiceHandlers();
 }
@@ -605,7 +612,7 @@ function renderStageSummary() {
   const chapter = getCurrentChapter();
   const report = session.stageReports.at(-1);
 
-  app.innerHTML = `
+  renderPage(`
     <section class="panel">
       <p class="section-label">${chapter.label}结算</p>
       <h2>${chapter.title}</h2>
@@ -628,7 +635,9 @@ function renderStageSummary() {
         进入下一幕
       </button>
     </section>
-  `;
+  `, {
+    compactHeader: true
+  });
 
   app
     .querySelector('[data-action="continue"]')
@@ -639,7 +648,7 @@ function renderEnding() {
   const ending = getEnding(session);
   const statReadout = getStatReadout(session.stats);
 
-  app.innerHTML = `
+  renderPage(`
     <section class="panel ending-panel">
       <p class="section-label">最终结局</p>
       <h2>${ending.personalTitle}</h2>
@@ -690,11 +699,22 @@ function renderEnding() {
 
       <button class="primary-button" data-action="continue" type="button">再来一局</button>
     </section>
-  `;
+  `, {
+    compactHeader: true
+  });
 
   app
     .querySelector('[data-action="continue"]')
     .addEventListener('click', onContinue);
+}
+
+function renderPage(content, options = {}) {
+  app.innerHTML = `
+    ${renderSiteHeader(PROJECT_COPY, {
+      compact: options.compactHeader ?? false
+    })}
+    ${content}
+  `;
 }
 
 function renderSceneHeader(chapter, event) {

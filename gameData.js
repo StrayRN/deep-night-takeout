@@ -4,12 +4,13 @@
 export const GAME_DATA = {
   meta: {
     id: 'deep-night-takeout',
-    title: '深夜食堂外：请放柜，谢谢',
-    shortTitle: '深夜食堂外',
-    subtitle: '一个关于手机下单、柜机现场与外卖权益谈判的互动策略游戏',
+    title: '深夜食堂：别放地上',
+    shortTitle: '别放地上',
+    eyebrow: '深夜食堂 · 校园夜宵互动游戏',
+    subtitle: '在高校，学生点外卖能送到指定位置到底有多爽',
     oneLiner: '一个关于校园外卖权益被层层谈判的互动策略游戏。',
     tagline:
-      '你会在 7 毛、4 毛与免费后的三个制度阶段里，下单、补地址、写备注、接电话、看现场，试着保住今晚的晚饭，也推动规则变化。'
+      '你将作为高校学生，与骑手、平台、学校多方进行妙趣横生的博弈，通过备注、沟通、留证和反馈等交互方式，试着保住今晚的外卖。'
   },
   stats: [
     {
@@ -37,7 +38,7 @@ export const GAME_DATA = {
     {
       id: 'stage-1',
       label: '第一幕',
-      title: '7 毛时代',
+      title: 'When things just work out',
       subtitle: '旧秩序下的隐性不公平',
       intro:
         '外卖柜收费 0.7 元。骑手通常不愿意入柜，但学校仍默许把餐放在寝室楼下台阶。矛盾已经存在，只是被“还能拿到饭”的现实暂时压住了。',
@@ -1131,6 +1132,7 @@ export const META = GAME_DATA.meta;
 export const PROJECT_COPY = {
   title: META.title,
   shortTitle: META.shortTitle,
+  eyebrow: META.eyebrow,
   subtitle: META.subtitle,
   oneLiner: META.oneLiner,
   tagline: META.tagline
