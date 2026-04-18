@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="rainSky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1b2740"/>
+      <stop offset="100%" stop-color="#08101b"/>
+    </linearGradient>
+    <linearGradient id="wetGround" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#26394d"/>
+      <stop offset="100%" stop-color="#111c28"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#rainSky)"/>
+  <rect x="86" y="220" width="628" height="520" rx="24" fill="#1b2c42"/>
+  <rect x="120" y="256" width="560" height="438" rx="16" fill="#22344a"/>
+  <g fill="#35506d">
+    <rect x="150" y="286" width="118" height="128" rx="10"/>
+    <rect x="286" y="286" width="118" height="128" rx="10"/>
+    <rect x="422" y="286" width="118" height="128" rx="10"/>
+    <rect x="558" y="286" width="82" height="128" rx="10"/>
+    <rect x="150" y="434" width="118" height="128" rx="10"/>
+    <rect x="286" y="434" width="118" height="128" rx="10"/>
+    <rect x="422" y="434" width="118" height="128" rx="10"/>
+    <rect x="558" y="434" width="82" height="128" rx="10"/>
+  </g>
+  <rect x="450" y="435" width="62" height="128" rx="10" fill="#4f7091"/>
+  <rect x="0" y="760" width="800" height="440" fill="url(#wetGround)"/>
+  <ellipse cx="404" cy="944" rx="230" ry="76" fill="#2e4d67" opacity=".55"/>
+  <rect x="326" y="858" width="158" height="98" rx="18" fill="#d37a46"/>
+  <rect x="512" y="850" width="56" height="18" rx="9" fill="#7ec8ff"/>
+  <g stroke="#9ecbf5" stroke-width="4" opacity=".42">
+    <path d="M118 90 82 210"/>
+    <path d="M214 42 178 162"/>
+    <path d="M310 82 274 202"/>
+    <path d="M406 36 370 156"/>
+    <path d="M502 66 466 186"/>
+    <path d="M598 48 562 168"/>
+    <path d="M694 92 658 212"/>
+    <path d="M760 148 724 268"/>
+  </g>
+  <text x="108" y="170" fill="#dbe8f7" font-family="sans-serif" font-size="34">暴雨中的校内外卖柜</text>
+</svg>

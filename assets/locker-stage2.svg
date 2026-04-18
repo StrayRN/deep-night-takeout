@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1200">
+  <defs>
+    <linearGradient id="night" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#19273b"/>
+      <stop offset="100%" stop-color="#0a121d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#night)"/>
+  <rect x="58" y="190" width="684" height="450" rx="26" fill="#1b2b40"/>
+  <rect x="96" y="230" width="608" height="370" rx="16" fill="#22354c"/>
+  <g fill="#324c67">
+    <rect x="126" y="258" width="120" height="100" rx="10"/>
+    <rect x="266" y="258" width="120" height="100" rx="10"/>
+    <rect x="406" y="258" width="120" height="100" rx="10"/>
+    <rect x="546" y="258" width="120" height="100" rx="10"/>
+    <rect x="126" y="384" width="120" height="100" rx="10"/>
+    <rect x="266" y="384" width="120" height="100" rx="10"/>
+    <rect x="406" y="384" width="120" height="100" rx="10"/>
+    <rect x="546" y="384" width="120" height="100" rx="10"/>
+  </g>
+  <rect x="0" y="650" width="800" height="550" fill="#192532"/>
+  <rect x="0" y="742" width="800" height="12" fill="#d3b05b"/>
+  <rect x="0" y="778" width="800" height="12" fill="#d3b05b"/>
+  <g opacity=".8">
+    <path d="M0 726h800" stroke="#0c1219" stroke-width="8" stroke-dasharray="42 26"/>
+    <path d="M0 762h800" stroke="#0c1219" stroke-width="8" stroke-dasharray="42 26"/>
+  </g>
+  <g>
+    <rect x="138" y="820" width="140" height="86" rx="18" fill="#ce6b3d"/>
+    <rect x="314" y="860" width="126" height="76" rx="18" fill="#da7b43"/>
+    <rect x="480" y="816" width="142" height="88" rx="18" fill="#c56234"/>
+    <rect x="264" y="930" width="154" height="90" rx="18" fill="#db8d51"/>
+  </g>
+  <text x="108" y="150" fill="#dbe7f4" font-family="sans-serif" font-size="34">宿舍区入口警戒线</text>
+</svg>
