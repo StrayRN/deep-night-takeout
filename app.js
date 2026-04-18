@@ -219,10 +219,9 @@ function render() {
 function renderHome() {
   renderPage(`
     <section class="panel hero-panel">
-      <div class="hero-copy">
-        <p class="section-label">一句话介绍</p>
-        <h2>${PROJECT_COPY.oneLiner}</h2>
-        <p>${PROJECT_COPY.tagline}</p>
+      <div class="summary-banner">
+        <span class="summary-tag">一句话介绍</span>
+        <p>${PROJECT_COPY.oneLiner}</p>
       </div>
 
       <div class="hero-grid">
